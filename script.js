@@ -1,3 +1,5 @@
+const jsConfetti = new JSConfetti();
+
 const click = document.querySelector(".click");
 const giftBox = document.querySelector(".gift-box");
 const shadow = document.querySelector(".shadow");
@@ -12,6 +14,13 @@ click.addEventListener("click", () => {
     giftContainer.classList.add("active");
     pony.classList.add("active");
     pony.classList.remove("active2");
+    setTimeout(() => {
+      jsConfetti.addConfetti({
+        emojis: ["🦄"],
+        emojiSize: 30,
+        confettiNumber: 100,
+      });
+    }, 1200);
   } else {
     click.classList.remove("active");
     giftBox.classList.remove("active");
@@ -19,5 +28,6 @@ click.addEventListener("click", () => {
     giftContainer.classList.remove("active");
     pony.classList.remove("active");
     pony.classList.add("active2");
+    jsConfetti.removeConfetti();
   }
 });

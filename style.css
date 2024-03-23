@@ -19,7 +19,7 @@ body {
   position: absolute;
   height: 200px;
   width: 300px;
-  background: #ec9c4a;
+  background: #FAAFC8;
   animation: Bounce 4s ease infinite forwards;
 }
 .gift-box.active {
@@ -30,7 +30,7 @@ body {
   position: absolute;
   width: 50px;
   height: 200px;
-  background: #e76f51;
+  background: #74D7EE;
   left: 124px;
 }
 .gift-box::after {
@@ -42,7 +42,7 @@ body {
 }
 .click {
   position: absolute;
-  background: #ec9c4a;
+  background: #FAAFC8;
   width: 340px;
   height: 90px;
   top: -90px;
@@ -60,7 +60,7 @@ body {
   position: absolute;
   width: 50px;
   height: 90px;
-  background: #e76f51;
+  background: #74D7EE;
   left: 144px;
   z-index: 2;
 }
@@ -69,8 +69,8 @@ body {
   position: absolute;
   width: 5px;
   height: 0;
-  border-bottom: 60px solid #e76f51;
-  border-top: 60px solid #e76f51;
+  border-bottom: 60px solid #74D7EE;
+  border-top: 60px solid #74D7EE;
   border-left: 5px solid transparent;
   border-right: 60px solid transparent;
   transform: rotate(-90deg);
@@ -103,7 +103,8 @@ body {
  
 }
 .pony.active {
-  top: -250px;
+  scale: 1.2;
+  top: -275px;
   animation: sway 4s ease infinite forwards;
 }
 .pony.active2{
@@ -155,12 +156,12 @@ body {
 }
 @keyframes sway {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(10deg);
   }
   50% {
-    transform: rotate(5deg);
+    transform: rotate(-10deg);
   }
   100% {
-    transform: rotate(0deg);
+    transform: rotate(10deg);
   }
 }
