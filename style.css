@@ -12,7 +12,9 @@ body {
   position: absolute;
   bottom: 20%;
 }
-
+.gift-container.active {
+  animation: Vibrate 1s ease forwards;
+}
 .gift-container .gift-box {
   position: absolute;
   height: 200px;
@@ -27,7 +29,7 @@ body {
   content: "";
   position: absolute;
   width: 50px;
-  height: 50px;
+  height: 200px;
   background: #e76f51;
   left: 124px;
 }
@@ -50,6 +52,7 @@ body {
   transition: 0.5s ease;
 }
 .click.active {
+  transition-delay: 1s;
   transform: translateY(-240px);
 }
 .click::before {
@@ -86,7 +89,42 @@ body {
   left: -4px;
   animation: BounceOut 4s ease infinite forwards;
 }
+.gift-container .shadow.active {
+  animation: none;
+}
 
+.pony{
+  position: absolute;
+  height: 150px;
+  z-index: -1;
+  transition: 0.5 ease all;
+  transition-delay: 1.2s;
+}
+.pony.active {
+  transform: translateY(-200px);
+}
+.pont.active2{
+  top: 0;
+  transition-delay: 0.2s;
+}
+
+@keyframes Vibrate {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.95, 1.05);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.9, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
 @keyframes Bounce {
   0% {
     transform: translateY(-24px);
