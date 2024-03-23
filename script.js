@@ -5,6 +5,8 @@ const giftBox = document.querySelector(".gift-box");
 const shadow = document.querySelector(".shadow");
 const giftContainer = document.querySelector(".gift-container");
 const pony = document.querySelector(".pony");
+const horseSound = document.querySelector("#horse-sound");
+const confettiSound = document.querySelector("#confetti-sound");
 
 click.addEventListener("click", () => {
   if (click.className === "click") {
@@ -14,11 +16,13 @@ click.addEventListener("click", () => {
     giftContainer.classList.add("active");
     pony.classList.add("active");
     pony.classList.remove("active2");
+    horseSound.play();
     setTimeout(() => {
+      confettiSound.play();
       jsConfetti.addConfetti({
         emojis: ["🦄"],
-        emojiSize: 30,
-        confettiNumber: 100,
+        emojiSize: 50,
+        confettiNumber: 150,
       });
     }, 1200);
   } else {
