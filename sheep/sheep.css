@@ -143,3 +143,20 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+ion-icon {
+  position: absolute;
+  top: 2vh;
+  right: 2vw;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 50px;
+  transition: ease-in-out 1000ms;
+}
+ion-icon:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  color: white;
+}
+#unmute {
+  display: none;
+}
