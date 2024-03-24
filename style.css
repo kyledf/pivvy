@@ -1,274 +1,273 @@
 @font-face {
-    font-family: "Camar";
-    src: url(assets/Camar.otf);
-  }
-  
-  body {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-  }
-  #text {
-    width: 100vw;
-    height: 100vh;
-    color: black;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transition: ease-in-out 1000ms;
-  }
-  #text > h1 {
-    margin: 0;
-    font-family: "Camar";
-    font-size: 75px;
-  }
-  #text > p {
-    margin: 0;
-    font-family: "Alatsi";
-    font-size: 15px;
-  }
-  #container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 125vw;
-    height: 125vh;
-  }
-  .rect {
-    position: absolute;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: ease-in-out 800ms;
-    box-shadow: 0px 30px 45px rgba(22, 22, 22, 0.3);
-  }
-  .rect > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+  font-family: "Camar";
+  src: url(assets/Camar.otf);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+#text {
+  width: 100vw;
+  height: 100vh;
+  color: black;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: ease-in-out 1000ms;
+}
+#text > h1 {
+  margin: 0;
+  font-family: "Camar";
+  font-size: 75px;
+}
+#text > p {
+  margin: 0;
+  font-family: "Alatsi";
+  font-size: 25px;
+}
+#container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 125vw;
+  height: 125vh;
+}
+.rect {
+  position: absolute;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: ease-in-out 800ms;
+  box-shadow: 0px 30px 45px rgba(22, 22, 22, 0.3);
+}
+.rect > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  border-radius: inherit;
+  transition: ease-in-out 800ms;
+}
+.rect:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.rect:hover > img {
+  opacity: 1;
+  transform: scale(1.01);
+}
+.rect:nth-child(1) {
+  background-color: #ed0134;
+  height: 14%;
+  width: 20%;
+  left: 5%;
+  top: 5%;
+}
+
+.rect:nth-child(2) {
+  background-color: #961015;
+  height: 24%;
+  width: 14%;
+  left: 42%;
+  top: 12%;
+}
+.rect:nth-child(3) {
+  background-color: #34711f;
+  height: 18%;
+  width: 16%;
+  left: 12%;
+  top: 34%;
+}
+
+.rect:nth-child(4) {
+  background-color: #fe9602;
+  height: 14%;
+  width: 12%;
+  left: 45%;
+  top: 48%;
+}
+
+.rect:nth-child(5) {
+  background-color: #63a5d2;
+  height: 16%;
+  width: 32%;
+  left: 8%;
+  top: 70%;
+}
+.rect:nth-child(6) {
+  background-color: #51ace4;
+  height: 24%;
+  width: 24%;
+  left: 68%;
+  top: 8%;
+}
+
+.rect:nth-child(7) {
+  background-color: #b1e328;
+  height: 16%;
+  width: 20%;
+  left: 50%;
+  top: 74%;
+}
+.rect:nth-child(8) {
+  background-color: #ffc619;
+  height: 24%;
+  width: 18%;
+  left: 72%;
+  top: 42%;
+}
+.rect.expanded {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  transition: ease-in-out 800ms;
+}
+.rect.expanded:hover {
+  transform: scale(1);
+  cursor: default;
+}
+.rect > .innerContent {
+  opacity: 0;
+}
+.rect.expanded > .innerContent {
+  animation: fadeIn 1000ms;
+  position: absolute;
+  top: 0vh;
+  left: 0vw;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: ease-in-out 1000ms;
+}
+ion-icon {
+  position: absolute;
+  top: 2vh;
+  left: 2vw;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 50px;
+  transition: ease-in-out 1000ms;
+}
+ion-icon:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  color: white;
+}
+.card {
+  color: white;
+  width: 30%;
+  height: 50%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.card > h1 {
+  font-size: 50px;
+  font-family: "Camar";
+  margin: 0;
+  padding: 0;
+}
+.card > ul {
+  text-align: left;
+  font-size: 20px;
+  font-family: "Alatsi";
+  margin: 15px;
+}
+.card > a {
+  position: absolute;
+  bottom: 30%;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+  font-family: "Alatsi";
+  display: block;
+  padding: 2px 5px;
+}
+.card > a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  opacity: 0;
+  transform: translate3d(-100%, 0, 0);
+  transition: opacity 800ms, transform 800ms;
+}
+
+.card > a:hover::after,
+.card > a:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+.rect:nth-child(1) .card {
+  background-color: rgba(237, 1, 52, 0.8);
+}
+.rect:nth-child(2) .card {
+  background-color: rgba(150, 16, 21, 0.8);
+}
+.rect:nth-child(3) .card {
+  background-color: rgba(52, 113, 31, 0.8);
+}
+.rect:nth-child(4) .card {
+  background-color: rgba(254, 150, 2, 0.8);
+}
+.rect:nth-child(5) .card {
+  background-color: rgba(99, 165, 210, 0.8);
+}
+.rect:nth-child(6) .card {
+  background-color: rgba(81, 172, 228, 0.8);
+}
+.rect:nth-child(7) .card {
+  background-color: rgba(177, 227, 40, 0.8);
+}
+.rect:nth-child(8) .card {
+  background-color: rgba(255, 198, 25, 0.8);
+}
+
+/* animations */
+/*fade in*/
+@keyframes fadeIn {
+  0% {
     opacity: 0;
-    border-radius: inherit;
-    transition: ease-in-out 800ms;
   }
-  .rect:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-  }
-  .rect:hover > img {
+  100% {
     opacity: 1;
-    transform: scale(1.01);
   }
-  .rect:nth-child(1) {
-    background-color: #ed0134;
-    height: 14%;
-    width: 20%;
-    left: 5%;
-    top: 5%;
-  }
-  
-  .rect:nth-child(2) {
-    background-color: #961015;
-    height: 24%;
-    width: 14%;
-    left: 42%;
-    top: 12%;
-  }
-  .rect:nth-child(3) {
-    background-color: #34711f;
-    height: 18%;
-    width: 16%;
-    left: 12%;
-    top: 34%;
-  }
-  
-  .rect:nth-child(4) {
-    background-color: #fe9602;
-    height: 14%;
-    width: 12%;
-    left: 45%;
-    top: 48%;
-  }
-  
-  .rect:nth-child(5) {
-    background-color: #63a5d2;
-    height: 16%;
-    width: 32%;
-    left: 8%;
-    top: 70%;
-  }
-  .rect:nth-child(6) {
-    background-color: #51ace4;
-    height: 24%;
-    width: 24%;
-    left: 68%;
-    top: 8%;
-  }
-  
-  .rect:nth-child(7) {
-    background-color: #b1e328;
-    height: 16%;
-    width: 20%;
-    left: 50%;
-    top: 74%;
-  }
-  .rect:nth-child(8) {
-    background-color: #ffc619;
-    height: 24%;
-    width: 18%;
-    left: 72%;
-    top: 42%;
-  }
-  .rect.expanded {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
-    transition: ease-in-out 800ms;
-  }
-  .rect.expanded:hover {
-    transform: scale(1);
-    cursor: default;
-  }
-  .rect > .innerContent {
+}
+@-webkit-keyframes fadeIn {
+  0% {
     opacity: 0;
   }
-  .rect.expanded > .innerContent {
-    animation: fadeIn 1000ms;
-    position: absolute;
-    top: 0vh;
-    left: 0vw;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  100% {
     opacity: 1;
-    transition: ease-in-out 1000ms;
   }
-  ion-icon {
-    position: absolute;
-    top: 2vh;
-    left: 2vw;
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 50px;
-    transition: ease-in-out 1000ms;
-  }
-  ion-icon:hover {
-    cursor: pointer;
-    transform: scale(1.2);
-    color: white;
-  }
-  .card {
-    color: white;
-    width: 30%;
-    height: 50%;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-  }
-  .card > h1 {
-    font-size: 50px;
-    font-family: "Camar";
-    margin: 0;
-    padding: 0;
-  }
-  .card > ul {
-    text-align: left;
-    font-size: 20px;
-    font-family: "Alatsi";
-    margin: 15px;
-  }
-  .card > a {
-    position: absolute;
-    bottom: 30%;
-    overflow: hidden;
-    text-decoration: none;
-    color: white;
-    font-size: 17px;
-    font-family: "Alatsi";
-    display: block;
-    padding: 2px 5px;
-  }
-  .card > a::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: white;
+}
+@-moz-keyframes fadeIn {
+  0% {
     opacity: 0;
-    transform: translate3d(-100%, 0, 0);
-    transition: opacity 800ms, transform 800ms;
   }
-  
-  .card > a:hover::after,
-  .card > a:focus::after {
+  100% {
     opacity: 1;
-    transform: translate3d(0, 0, 0);
   }
-  .rect:nth-child(1) .card {
-    background-color: rgba(237, 1, 52, 0.8);
-  }
-  .rect:nth-child(2) .card {
-    background-color: rgba(150, 16, 21, 0.8);
-  }
-  .rect:nth-child(3) .card {
-    background-color: rgba(52, 113, 31, 0.8);
-  }
-  .rect:nth-child(4) .card {
-    background-color: rgba(254, 150, 2, 0.8);
-  }
-  .rect:nth-child(5) .card {
-    background-color: rgba(99, 165, 210, 0.8);
-  }
-  .rect:nth-child(6) .card {
-    background-color: rgba(81, 172, 228, 0.8);
-  }
-  .rect:nth-child(7) .card {
-    background-color: rgba(177, 227, 40, 0.8);
-  }
-  .rect:nth-child(8) .card {
-    background-color: rgba(255, 198, 25, 0.8);
-  }
-  
-  /* animations */
-  /*fade in*/
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @-webkit-keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @-moz-keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
+}
