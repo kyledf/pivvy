@@ -15,6 +15,7 @@ unmuteButton.addEventListener("click", () => {
   audio.pause();
 });
 
+let canvasPhotos = document.querySelectorAll(".photo");
 let items = document.querySelectorAll(".slider .item");
 let active = 0;
 
@@ -57,3 +58,17 @@ prev.onclick = function () {
   active = active - 1 >= 0 ? active - 1 : items.length - 1;
   loadShow();
 };
+
+canvasPhotos.forEach((canvas) => {
+  let c = canvas.querySelector(".canvas");
+  let r = canvas.querySelector(".real");
+  canvas.addEventListener("click", () => {
+    if (c.style.display === "none") {
+      c.style.display = "block";
+      r.style.display = "none";
+    } else {
+      c.style.display = "none";
+      r.style.display = "block";
+    }
+  });
+});
