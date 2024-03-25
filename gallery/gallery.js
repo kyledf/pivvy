@@ -45,14 +45,15 @@ function loadShow() {
     items[i].style.opacity = stt > 2 ? 0 : 0.6;
   }
 }
+
 loadShow();
 let next = document.getElementById("next");
 let prev = document.getElementById("prev");
 next.onclick = function () {
-  active = active + 1 < items.length ? active + 1 : active;
+  active = active + 1 < items.length ? active + 1 : 0;
   loadShow();
 };
 prev.onclick = function () {
-  active = active - 1 >= 0 ? active - 1 : active;
+  active = active - 1 >= 0 ? active - 1 : items.length - 1;
   loadShow();
 };
