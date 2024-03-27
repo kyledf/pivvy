@@ -10,9 +10,14 @@ const movePlayer = (e) => {
   player.style.left = x + "px";
 };
 
-container.onmousemove = function (e) {
-  movePlayer(e);
-};
-container.ontouchmove = function (e) {
-  movePlayer(e.touches[0]);
-};
+if ("ontouchstart" in document.documentElement) {
+  container.ontouchmove = function (e) {
+    movePlayer(e.touches[0]);
+    document.querySelector(".device").textContent = "Touch";
+  };
+} else {
+  container.onmousemove = function (e) {
+    movePlayer(e);
+    document.querySelector(".device").textContent = "Mouse";
+  };
+}
