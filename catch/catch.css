@@ -17,8 +17,15 @@ body {
 }
 
 .player {
-    position: relative;
+  position: relative;
   width: 10%;
-  aspect-ratio: 1;
-  background-color: red;
+  height: fit-content;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+}
+.player img {
+  width: 150%;
+  height: 100%;
+  object-fit: cover;
 }
