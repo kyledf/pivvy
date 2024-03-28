@@ -4,12 +4,31 @@ body {
   margin: 0;
   padding: 0;
 }
+.back {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  z-index: 1000;
+}
+
+.back a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+.back a:hover {
+  color: #faafc8;
+}
 .container {
   width: 80vw;
   max-height: 95vh;
   aspect-ratio: 16/9;
   border: 2px solid black;
-  margin: 5px auto;
+  margin: auto;
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -65,15 +84,12 @@ body {
   background-repeat: no-repeat;
 }
 .info {
-  position: absolute;
-  left: calc(50% - 3.5vw);
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 5px;
-  width: 7vw;
 }
 
 .score {
-  font-size: 1.5rem;
   text-align: center;
 }

@@ -37,7 +37,7 @@ const moveFalling = (obj) => {
     Math.random() * (container.offsetWidth - obj.offsetWidth) + containerX
   );
   obj.style.left = x + "px";
-  obj.style.top = "0px";
+  obj.style.top = "60px";
   //check if the falling element is catched by the player
   checkCatch(obj);
   //if the falling element reach the bottom of the container, it will be hidden
