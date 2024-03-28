@@ -14,6 +14,10 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   overflow: hidden;
+  background-image: url(../assets/catch/home.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
 
 .player {
