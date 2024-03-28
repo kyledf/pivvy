@@ -4,23 +4,45 @@ body {
   margin: 0;
   padding: 0;
 }
+.back {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  z-index: 1000;
+}
+
+.back a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+.back a:hover {
+  color: #faafc8;
+}
 .container {
   width: 80vw;
   max-height: 95vh;
   aspect-ratio: 16/9;
   border: 2px solid black;
-  margin: 5px auto;
+  margin: auto;
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  overflow-x: hidden;
+  overflow: hidden;
+  background-image: url(../assets/catch/home.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
 
 .player {
   position: relative;
   width: 10%;
   height: fit-content;
-  background-color: aqua;
   display: flex;
   justify-content: center;
 }
@@ -28,4 +50,46 @@ body {
   width: 150%;
   height: 100%;
   object-fit: cover;
+}
+
+.falling {
+  position: absolute;
+  display: none;
+  width: 5%;
+  aspect-ratio: 1/1;
+}
+
+.falling:nth-child(1) {
+  background-image: url(../assets/catch/bacon.webp);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.falling:nth-child(2) {
+  background-image: url(../assets/catch/pickles.webp);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.falling:nth-child(3) {
+  background-image: url(../assets/catch/powerade.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.falling:nth-child(4) {
+  background-image: url(../assets/catch/roll.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.info {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+.score {
+  text-align: center;
 }

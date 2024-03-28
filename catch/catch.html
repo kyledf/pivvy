@@ -7,12 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
+    <div class="back">
+      <a href="../index.html">← Back to Pivvy's Pebsite</a>
+    </div>
     <div class="container">
+      <div class="falling"></div>
+      <div class="falling"></div>
+      <div class="falling"></div>
+      <div class="falling"></div>
+
       <div class="player">
-        <img src="../assets/catch/player.png" alt="player">
+        <img src="../assets/catch/player.png" alt="player" />
       </div>
     </div>
-    <div class="device">test</div>
+    <div class="info">
+      <div class="score">
+        Score:
+        <div class="score-value">0</div>
+      </div>
+      <button onclick="startGame()">Start</button>
+    </div>
     <script src="catch.js"></script>
   </body>
 </html>
