@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates");
+html {
+  height: 200vh;
+  background: radial-gradient(ellipse at center, #dbb800 0%, #688acc 50%);
+  cursor: pointer;
+}
+body {
+  height: 100vh;
+  overflow: hidden;
+  border-bottom: 10vh #339545 solid;
+  box-sizing: border-box;
+  position: relative;
+}
+.back {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  z-index: 1000;
+}
+
+.back a {
+  font-family: "Montserrat Alternates", sans-serif;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.back a:hover {
+  color: #faafc8;
+  text-shadow: 2px 2px 2px rgb(108, 31, 56);
+}
+ion-icon {
+  position: absolute;
+  top: 2vh;
+  right: 2vw;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 50px;
+  transition: ease-in-out 1000ms;
+}
+ion-icon:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  color: white;
+}
+#unmute {
+  display: none;
+}
+.garden {
+  position: absolute;
+  top: 5vw;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+h1 {
+  text-align: center;
+  color: white;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 40px;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  top: 0vh;
+  transform: translate(0, 100vh);
+  animation: move 1s 2.5s forwards;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+@keyframes move {
+  0% {
+    transform: translate(0, 100vh);
+  }
+  100% {
+    transform: translate(0vh, 0);
+  }
+}
+.tulip {
+  width: 60vmin;
+  height: 60vmin;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.garden .tulip {
+  bottom: 5vw;
+}
+.tulip__leaf--left,
+.tulip__leaf--right {
+  width: 0%;
+  height: 20%;
+  border-radius: 0% 50% 0% 50%;
+  position: absolute;
+  background: #6f8e4b;
+  top: 70%;
+  left: 45%;
+  transform: translate(-100%, -50%) rotate(-20deg);
+  animation: tulip__leaf forwards 1s 0.5s;
+}
+.tulip__leaf--right {
+  top: 80%;
+  left: 55%;
+  transform: translate(0%, -50%) rotate(-70deg);
+}
+@keyframes tulip__leaf {
+  0% {
+    width: 0%;
+    border: 0px solid black;
+  }
+  100% {
+    width: 20%;
+    border: 2px solid black;
+  }
+}
+.tulip__stem {
+  position: absolute;
+  transform: translate(-50%, 0%);
+  width: 5%;
+  height: 60%;
+  background: #556d39;
+  left: 50%;
+  bottom: 0%;
+  border: 2px solid black;
+  animation: tulip__stem forwards 1s;
+}
+@keyframes tulip__stem {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 60%;
+  }
+}
+.tulip__pedal--1,
+.tulip__pedal--2,
+.tulip__pedal--3 {
+  border-radius: 50%;
+  background: #f27dfb;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  animation: grow-pedal-back 1s 1.5s forwards;
+}
+.tulip__pedal--2 {
+  transform: translate(-20%, -42%) rotate(15deg);
+}
+.tulip__pedal--3 {
+  transform: translate(-85%, -42%) rotate(165deg);
+}
+@keyframes grow-pedal-back {
+  0% {
+    width: 0%;
+    height: 0%;
+    border: 0px solid black;
+  }
+  100% {
+    width: 15%;
+    height: 45%;
+    border: 2px solid black;
+  }
+}
