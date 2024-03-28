@@ -17,9 +17,13 @@ unmuteButton.addEventListener("click", () => {
 
 let canvasPhotos = document.querySelectorAll(".photo");
 let items = document.querySelectorAll(".slider .item");
+let currentPhoto = document.getElementById("current");
+let totalPhoto = document.getElementById("total");
 let active = 0;
 
 function loadShow() {
+  currentPhoto.innerText = active + 1;
+  totalPhoto.innerText = items.length;
   items[active].style.transform = `none`;
   items[active].style.zIndex = 1;
   items[active].style.filter = "none";
@@ -50,6 +54,7 @@ function loadShow() {
 loadShow();
 let next = document.getElementById("next");
 let prev = document.getElementById("prev");
+
 next.onclick = function () {
   active = active + 1 < items.length ? active + 1 : 0;
   loadShow();

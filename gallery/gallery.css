@@ -116,3 +116,18 @@ img {
 #next:hover {
   opacity: 1;
 }
+.number {
+  position: absolute;
+  width: 6vw;
+  min-width: 100px;
+  top: 85vh;
+  left: calc(50% - 50px);
+  color: #1e1e1e;
+  font-size: 1rem;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 1;
+}
