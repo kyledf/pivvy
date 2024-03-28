@@ -11,6 +11,50 @@ body {
   box-sizing: border-box;
   position: relative;
 }
+.back {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  z-index: 1000;
+}
+
+.back a {
+  font-family: "Montserrat Alternates", sans-serif;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.back a:hover {
+  color: #faafc8;
+  text-shadow: 2px 2px 2px rgb(108, 31, 56);
+}
+ion-icon {
+  position: absolute;
+  top: 2vh;
+  right: 2vw;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 50px;
+  transition: ease-in-out 1000ms;
+}
+ion-icon:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  color: white;
+}
+#unmute {
+  display: none;
+}
+.garden {
+  position: absolute;
+  top: 5vw;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 h1 {
   text-align: center;
   color: white;
@@ -22,6 +66,7 @@ h1 {
   top: 0vh;
   transform: translate(0, 100vh);
   animation: move 1s 2.5s forwards;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 @keyframes move {
   0% {
@@ -32,12 +77,15 @@ h1 {
   }
 }
 .tulip {
-  width: 80vmin;
-  height: 80vmin;
+  width: 60vmin;
+  height: 60vmin;
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 0%);
+}
+.garden .tulip {
+  bottom: 5vw;
 }
 .tulip__leaf--left,
 .tulip__leaf--right {

@@ -49,6 +49,23 @@ const growGarden = () => {
   }, numOfFlowers * 150);
 };
 
-document.body.addEventListener("click", () => {
+const garden = document.querySelector(".garden");
+garden.addEventListener("click", () => {
   growGarden();
+});
+const muteButton = document.querySelector("#mute");
+const unmuteButton = document.querySelector("#unmute");
+const audio = document.querySelector("audio");
+
+muteButton.addEventListener("click", () => {
+  muteButton.style.display = "none";
+  unmuteButton.style.display = "block";
+  audio.muted = false;
+  audio.play();
+});
+unmuteButton.addEventListener("click", () => {
+  unmuteButton.style.display = "none";
+  muteButton.style.display = "block";
+  audio.muted = true;
+  audio.pause();
 });

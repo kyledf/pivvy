@@ -10,15 +10,30 @@
     <div class="back">
       <a href="../index.html">← Back to Pivvy's Pebsite</a>
     </div>
-    <h1>Nivvy's Garden<br /><small>(click for more)</small></h1>
-    <div class="tulip">
-      <div class="tulip__leaf--left"></div>
-      <div class="tulip__leaf--right"></div>
-      <div class="tulip__stem"></div>
-      <div class="tulip__pedal--1"></div>
-      <div class="tulip__pedal--2"></div>
-      <div class="tulip__pedal--3"></div>
+    <div class="sound-buttons">
+      <ion-icon id="mute" name="volume-mute-outline"></ion-icon>
+      <ion-icon id="unmute" name="volume-high-outline"></ion-icon>
+      <audio src="../assets/garden/garden.mp3"></audio>
+    </div>
+    <div class="garden">
+      <h1>Nivvy's Garden<br /><small>(click to grow)</small></h1>
+      <div class="tulip">
+        <div class="tulip__leaf--left"></div>
+        <div class="tulip__leaf--right"></div>
+        <div class="tulip__stem"></div>
+        <div class="tulip__pedal--1"></div>
+        <div class="tulip__pedal--2"></div>
+        <div class="tulip__pedal--3"></div>
+      </div>
     </div>
     <script src="garden.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
