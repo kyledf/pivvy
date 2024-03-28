@@ -34,10 +34,32 @@ body {
   display: none;
   width: 5%;
   aspect-ratio: 1/1;
-  background-color: red;
-  border: 1px solid black;
 }
 
+.falling:nth-child(1) {
+  background-image: url(../assets/catch/bacon.webp);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.falling:nth-child(2) {
+  background-image: url(../assets/catch/pickles.webp);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.falling:nth-child(3) {
+  background-image: url(../assets/catch/powerade.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.falling:nth-child(4) {
+  background-image: url(../assets/catch/roll.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 .info {
   position: absolute;
   left: calc(50% - 3.5vw);
