@@ -111,6 +111,27 @@ function update() {
       dinoImg.onload = function () {
         context.drawImage(dinoImg, dino.x, dino.y, dino.width, dino.height);
       };
+      //show game over img
+      let gameOverImg = new Image();
+      gameOverImg.src = "../assets/dino/game-over.png";
+      gameOverImg.onload = function () {
+        context.drawImage(gameOverImg, 200, 100, 350, 100);
+      };
+
+      //show countdown to restart
+      let countdown = 5;
+      let countdownInterval = setInterval(function () {
+        context.clearRect(0, 0, board.width, board.height);
+        context.drawImage(gameOverImg, 200, 100, 350, 100);
+        context.fillStyle = "black";
+        context.font = "20px courier";
+        context.fillText("Restarting in: " + countdown, 300, 200);
+        countdown--;
+        if (countdown < 0) {
+          clearInterval(countdownInterval);
+          location.reload();
+        }
+      }, 1000);
     }
   }
 
