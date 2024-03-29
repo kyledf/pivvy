@@ -49,8 +49,8 @@ window.onload = function () {
   context = board.getContext("2d"); //used for drawing on the board
 
   //draw initial dinosaur
-//   context.fillStyle = "green";
-//   context.fillRect(dino.x, dino.y, dino.width, dino.height);
+  //   context.fillStyle = "green";
+  //   context.fillRect(dino.x, dino.y, dino.width, dino.height);
 
   dinoImg = new Image();
   dinoImg.src = "../assets/dino/dino.png";
@@ -117,10 +117,10 @@ function moveDino(e) {
     return;
   }
 
-  if ((e.code == "Space" || e.code == "ArrowUp") && dino.y == dinoY) {
+  if (e.code == "Space" || e.code == "ArrowUp") {
     //jump
     velocityY = -10;
-  } else if (e.code == "ArrowDown" && dino.y == dinoY) {
+  } else if (e.code == "ArrowDown") {
     //duck
   }
 }
