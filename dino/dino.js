@@ -41,6 +41,11 @@ let gravity = 0.4;
 let gameOver = false;
 let score = 0;
 
+let isTouchScreen =
+  "ontouchstart" in window ||
+  navigator.maxTouchPoints > 0 ||
+  navigator.msMaxTouchPoints > 0;
+
 window.onload = function () {
   board = document.getElementById("board");
   board.height = boardHeight;
@@ -69,7 +74,11 @@ window.onload = function () {
 
   requestAnimationFrame(update);
   setInterval(placeCactus, 1000); //1000 milliseconds = 1 second
-  document.addEventListener("keydown", moveDino);
+  if (isTouchScreen) {
+    document.addEventListener("touchstart", moveDino);
+  } else {
+    document.addEventListener("keydown", moveDino);
+  }
 };
 
 function update() {
@@ -115,6 +124,10 @@ function update() {
 function moveDino(e) {
   if (gameOver) {
     return;
+  }
+  if (isTouchScreen) {
+    //jump
+    velocityY = -10;
   }
 
   if (e.code == "Space" || e.code == "ArrowUp") {
