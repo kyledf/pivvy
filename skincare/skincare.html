@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>PinPare Poutine</title>
+  <link rel="stylesheet" href="skincare.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <div class="back">
+    <a href="../index.html">← Back to Pivvy's Pebsite</a>
+  </div>
+  <div class="container">
+    <div class="body"></div>
+    <div class="face"></div>
+    <div class="products">
+      <div class="product" id="sink" onclick="activateProduct(this)"></div>
+      <div class="product" id="towel" onclick="activateProduct(this)"></div>
+      <div class="product" id="cleanser" onclick="activateProduct(this)"></div>
+      <div class="product" id="toner" onclick="activateProduct(this)"></div>
+      <div class="product" id="moisturiser" onclick="activateProduct(this)"></div>
+      <div class="product" id="face-mask" onclick="activateProduct(this)"></div>
+      <div class="product" id="lip-balm" onclick="activateProduct(this)"></div>
+    </div>
+    <div class="cursor"></div>
+    <button class="finish" onclick="checkRoutine()">
+      Finish Skincare Routine
+    </button>
+    <div class="final-score">
+      <h1>Final Score</h1>
+      <p id="score">0%</p>
+      <p id="message">You have not completed your skincare routine in the right order. Restart and try again!</p>
+      <button class="restart" onclick="restart()">Restart</button>
+    </div>
+  </div>
+  <script src="skincare.js"></script>
+</body>
+
+</html>
