@@ -14,6 +14,21 @@ let correctRoutine = [
   "lip-balm",
 ];
 
+window.onload = () => {
+  randomizeProductOrder();
+};
+
+randomizeProductOrder = () => {
+  let products = document.querySelectorAll(".product");
+  let productsArray = Array.from(products);
+  productsArray.sort(() => Math.random() - 0.5);
+  let container = document.querySelector(".products");
+  container.innerHTML = "";
+  productsArray.forEach((product) => {
+    container.appendChild(product);
+  });
+};
+
 activateProduct = (product) => {
   const isActive = document.querySelectorAll(".product.active");
   if (isActive[0]) {
@@ -99,4 +114,5 @@ restart = () => {
   document.querySelectorAll(".product.active").forEach((product) => {
     product.classList.remove("active");
   });
+  randomizeProductOrder();
 };
