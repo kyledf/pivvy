@@ -44,9 +44,17 @@ document.addEventListener("mousemove", (e) => {
 
 face.addEventListener("mouseover", () => {
   if (cursor.style.opacity === "1") {
-    face.style.backgroundColor = "blue";
+    // face.style.transform = "translate(-50%, -30%) scale(1.01)";
+
+    face.style.backgroundImage = "url(../assets/skincare/face-2.png)";
+    if (activeProduct === "lip-balm") {
+      face.style.backgroundImage = "url(../assets/skincare/face-3.png)";
+    }
   }
 });
 face.addEventListener("mouseout", () => {
-  face.style.backgroundColor = "white";
+  if (cursor.style.opacity === "1") {
+    // face.style.transform = "translate(-50%, -30%) scale(1)";
+    face.style.backgroundImage = "url(../assets/skincare/face-1.png)";
+  }
 });
