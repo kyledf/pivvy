@@ -143,3 +143,47 @@ body {
   transition: all 0.1s ease;
   transform: translate(-50%, -50%);
 }
+
+.finish {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  background-color: #faafc8;
+  color: #fff;
+  border: 1px solid #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+button:hover {
+  transform: scale(1.1);
+}
+
+.final-score {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: #fff;
+  background-color: #faafc8;
+  border-radius: 15px;
+  border: 5px solid #fff;
+  padding: 20px;
+  text-shadow: 2px 2px 2px rgb(108, 31, 56);
+  z-index: 1000;
+}
+.final-score .restart {
+  font-size: 20px;
+  background-color: #ffffff;
+  color: #faafc8;
+  border: 2px solid #faafc8;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}

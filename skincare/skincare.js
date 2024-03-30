@@ -1,6 +1,18 @@
 const cursor = document.querySelector(".cursor");
 const face = document.querySelector(".face");
+const finalScore = document.querySelector(".final-score");
+const percentageScore = document.querySelector("#score");
 let activeProduct;
+let productsApplied = [];
+let correctRoutine = [
+  "cleanser",
+  "sink",
+  "towel",
+  "toner",
+  "moisturiser",
+  "face-mask",
+  "lip-balm",
+];
 
 activateProduct = (product) => {
   const isActive = document.querySelectorAll(".product.active");
@@ -13,8 +25,9 @@ activateProduct = (product) => {
     }
   }
   activeProduct = product.id;
-  console.log(activeProduct);
   product.classList.add("active");
+  productsApplied.push(activeProduct);
+  console.log(productsApplied);
 };
 
 document.addEventListener("mousemove", (e) => {
@@ -58,3 +71,32 @@ face.addEventListener("mouseout", () => {
     face.style.backgroundImage = "url(../assets/skincare/face-1.png)";
   }
 });
+
+checkRoutine = () => {
+  finalScore.style.display = "block";
+  let score = 0;
+  for (let i = 0; i < correctRoutine.length; i++) {
+    if (correctRoutine[i] === productsApplied[i]) {
+      score++;
+    }
+  }
+  //rounded to nearest integer
+  percentageScore.innerHTML = `${Math.round(
+    (score / correctRoutine.length) * 100
+  )}%`;
+  if (score === correctRoutine.length) {
+    percentageScore.innerHTML = "100%";
+    document.querySelector("#message").innerHTML =
+      "Congratulations! You have completed your skincare routine!";
+  }
+};
+
+restart = () => {
+  finalScore.style.display = "none";
+  productsApplied = [];
+  document.querySelector("#message").innerHTML =
+    "You have not completed your skincare routine in the right order. Restart and try again!";
+  document.querySelectorAll(".product.active").forEach((product) => {
+    product.classList.remove("active");
+  });
+};
