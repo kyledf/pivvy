@@ -67,7 +67,9 @@ body {
   bottom: 0;
   width: 100vw;
   height: 20vh;
-  background-color: cornsilk;
+  background-image: url(../assets/skincare/ceramic.jpeg);
+  background-size: contain;
+  box-shadow: 0 -15px 50px #1e1e1e;
 }
 .products .product {
   height: 100%;
@@ -75,6 +77,9 @@ body {
   transform: translateY(-50%);
   transition: all 0.5s ease;
   z-index: 2;
+  -webkit-filter: drop-shadow(0 10px 15px #1e1e1e);
+  filter: drop-shadow(0 10px 15px #1e1e1e);
+  cursor: pointer;
 }
 #sink {
   height: 100px;
