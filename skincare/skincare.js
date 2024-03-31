@@ -50,6 +50,8 @@ document.addEventListener("mousemove", (e) => {
   cursor.style.left = e.pageX + "px";
   if (document.querySelector(".active") !== null) {
     cursor.style.opacity = "1";
+    cursor.style.width = "100px";
+    cursor.style.height = "100px";
     if (activeProduct === "sink") {
       cursor.style.backgroundImage = "url(../assets/skincare/water.webp)";
     } else if (activeProduct === "towel") {
