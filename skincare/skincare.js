@@ -62,6 +62,8 @@ document.addEventListener("mousemove", (e) => {
       cursor.style.backgroundImage = "url(../assets/skincare/cream.png)";
     } else if (activeProduct === "face-mask") {
       cursor.style.backgroundImage = "url(../assets/skincare/face-mask.png)";
+      cursor.style.width = "200px";
+      cursor.style.height = "200px";
     } else if (activeProduct === "lip-balm") {
       cursor.style.backgroundImage = "url(../assets/skincare/lip-balm.webp)";
     }
@@ -77,6 +79,10 @@ face.addEventListener("mouseover", () => {
     face.style.backgroundImage = "url(../assets/skincare/face-2.png)";
     if (activeProduct === "lip-balm") {
       face.style.backgroundImage = "url(../assets/skincare/face-3.png)";
+    } else if (activeProduct === "sink") {
+      face.style.backgroundImage = "url(../assets/skincare/face-4.png)";
+    } else if (activeProduct === "face-mask") {
+      face.style.backgroundImage = "url(../assets/skincare/face-5.png)";
     }
   }
 });
