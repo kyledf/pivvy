@@ -9,13 +9,13 @@ window.setInterval(function () {
   let seconds = Math.floor((distance % (1000 * 60)) / 1000) * -1 - 1;
   document.getElementById("time").innerHTML =
     days +
-    (days == 1 ? " day " : " days ") +
+    (days == 1 ? " day <br/>" : " days <br/>") +
     hours +
-    (hours == 1 ? " hour " : " hours ") +
+    (hours == 1 ? " hour <br/>" : " hours <br/>") +
     minutes +
-    (minutes == 1 ? " minute " : " minutes ") +
+    (minutes == 1 ? " minute <br/>" : " minutes <br/>") +
     seconds +
-    (seconds == 1 ? " second " : " seconds ");
+    (seconds == 1 ? " second <br/>" : " seconds <br/>");
   moneySaved(days, hours, minutes, seconds);
 }, 1000);
 

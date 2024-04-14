@@ -4,7 +4,50 @@ body {
   margin: 0;
   padding: 0;
 }
+.back {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  z-index: 1000;
+}
+
+.back a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.back a:hover {
+  color: #faafc8;
+  text-shadow: 2px 2px 2px rgb(108, 31, 56);
+}
 .timeSince {
-  color: #999;
-  font-size: 0.8em;
+  position: absolute;
+  top: 45px;
+  left: calc(50% - 12.5vw);
+  background-color: #fff;
+  border-radius: 5px;
+  color: #000;
+  font-size: 1.2em;
+  padding: 10px;
+  text-align: center;
+  width: 25vw;
+  border: 2px solid #000;
+}
+.timeSince #time {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+.moneySaved {
+  background-color: #fff;
+  border-radius: 5px;
+  color: #000;
+  font-size: 1.2em;
+  padding: 10px;
+  text-align: center;
+  width: 25vw;
+  border: 2px solid #000;
 }
