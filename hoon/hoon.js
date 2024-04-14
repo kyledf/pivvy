@@ -16,10 +16,19 @@ window.setInterval(function () {
     (minutes == 1 ? " minute " : " minutes ") +
     seconds +
     (seconds == 1 ? " second " : " seconds ");
-  moneySaved(days);
+  moneySaved(days, hours, minutes, seconds);
 }, 1000);
 
-function moneySaved(days) {
-  let money = days * 2.86;
+function moneySaved(days, hours, minutes, seconds) {
+  let money =
+    (days + hours / 24 + minutes / 1440 + seconds / 86400) * 2.85714286;
   document.getElementById("money").innerHTML = "$" + money.toFixed(2);
+  let mcChicken = money / 14.5;
+  document.getElementById("mcChicken").innerHTML = mcChicken.toFixed(2);
+  let powerade = money / 4;
+  document.getElementById("powerade").innerHTML = powerade.toFixed(2);
+  let goats = money / 80;
+  document.getElementById("goats").innerHTML = goats.toFixed(2);
+  let raffello = money / (12 / 8);
+  document.getElementById("raffello").innerHTML = raffello.toFixed(2);
 }
