@@ -9,13 +9,13 @@ window.setInterval(function () {
   let seconds = Math.floor((distance % (1000 * 60)) / 1000) * -1 - 1;
   document.getElementById("time").innerHTML =
     days +
-    (days == 1 ? " day <br/>" : " days <br/>") +
+    (days == 1 ? " day " : " days ") +
     hours +
-    (hours == 1 ? " hour <br/>" : " hours <br/>") +
+    (hours == 1 ? " hour " : " hours ") +
     minutes +
-    (minutes == 1 ? " minute <br/>" : " minutes <br/>") +
+    (minutes == 1 ? " minute " : " minutes ") +
     seconds +
-    (seconds == 1 ? " second <br/>" : " seconds <br/>");
+    (seconds == 1 ? " second " : " seconds ");
   moneySaved(days, hours, minutes, seconds);
 }, 1000);
 
@@ -31,4 +31,35 @@ function moneySaved(days, hours, minutes, seconds) {
   document.getElementById("goats").innerHTML = goats.toFixed(2);
   let raffello = money / (12 / 8);
   document.getElementById("raffello").innerHTML = raffello.toFixed(2);
+}
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("slide");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
 }

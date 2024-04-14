@@ -35,20 +35,42 @@
       </h1>
       <br />
       With that you can buy:
+      <div class="slideshow-container">
+        <div class="slide fade">
+          <div class="numbertext" id="mcChicken"></div>
+          <img src="../assets/hoon/mc-chicken.jpeg" style="width: 100%" />
+          <div class="text">Medium McChicken Combos</div>
+        </div>
+
+        <div class="slide fade">
+          <div class="numbertext" id="powerade"></div>
+          <img src="../assets/hoon/powerade.avif" style="width: 100%" />
+          <div class="text">Powerades</div>
+        </div>
+
+        <div class="slide fade">
+          <div class="numbertext" id="goats"></div>
+          <img src="../assets/hoon/goats.jpeg" style="width: 100%" />
+          <div class="text">Goats</div>
+        </div>
+
+        <div class="slide fade">
+          <div class="numbertext" id="raffello"></div>
+          <img src="../assets/hoon/raffello.jpeg" style="width: 100%" />
+          <div class="text">Raffello Chocolates</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      </div>
       <br />
-      <span id="mcChicken"></span> Medium McChicken Combos
-      <br />
-      or
-      <br />
-      <span id="powerade"></span> Powerades
-      <br />
-      or
-      <br />
-      <span id="goats"></span> Goats
-      <br />
-      or
-      <br />
-      <span id="raffello"></span> Raffello Chocolates
+
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
     </div>
   </body>
   <script src="hoon.js"></script>
