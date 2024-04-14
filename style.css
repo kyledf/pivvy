@@ -123,6 +123,13 @@ body {
   left: 72%;
   top: 42%;
 }
+.rect:nth-child(9) {
+  background-color: #9410af;
+  height: 19%;
+  width: 10%;
+  left: 75%;
+  top: 72%;
+}
 .rect.expanded {
   position: absolute;
   top: 0;
@@ -247,6 +254,9 @@ ion-icon:hover {
 }
 .rect:nth-child(8) .card {
   background-color: rgba(255, 198, 25, 0.8);
+}
+.rect:nth-child(9) .card {
+  background-color: rgba(148, 16, 175, 0.8);
 }
 
 /* animations */

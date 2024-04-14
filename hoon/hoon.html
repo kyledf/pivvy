@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Poon Pracker</title>
+    <link rel="stylesheet" type="text/css" href="hoon.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-97C72DF7RV"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-97C72DF7RV");
+  </script>
+  <body>
+    <div class="timeSince">
+      <h1>Days since last hoon:</h1>
+      <span id="time"></span>
+    </div>
+    <div class="moneySaved">
+      <h1>
+        You have saved 
+        <span id="money"></span>!
+      </h1>
+    </div>
+  </body>
+  <script src="hoon.js"></script>
+</html>
